@@ -1,0 +1,11 @@
+
+with open('dt1.csv', 'w') as f:
+    rdata = [(9.95, 110, 740), (5.04, 110, 460)]
+    for dt in rdata:
+        r = dt[0]
+        c = dt[1]
+        tau = r * c
+        er = (dt[2] - tau) / tau
+
+        f.write('{.2f},{.2f},{.2f},{.2f}', r, dt[2], tau, er)
+

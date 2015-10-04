@@ -1,0 +1,14 @@
+** Circuit 1 **
+
+v1 1 0 PULSE(-5 5 0 0 0 10us 20us)
+r1 1 2 5k
+l1 2 0 10m
+
+.control
+tran 10n 1100us 1000us
+plot v(1) v(2) v(1)-v(2)
+wrdata d2 v(1) v(1)-v(2) v(2)
+.endc
+
+
+

@@ -1,0 +1,14 @@
+** Circuit 1 **
+
+v1 1 0 SIN(0 5 10k)
+r1 1 2 1k
+c1 2 0 0.1u
+
+.control
+tran 1u 1000m 999.8m
+plot v(1) v(2)
+wrdata d10000 v(1) v(2)
+.endc
+
+
+
